@@ -1,4 +1,4 @@
 export const corsOptions = {
-  origin: "*",
+  origin: '*',
   optionsSuccessStatus: 200,
 };
