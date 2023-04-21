@@ -24,11 +24,12 @@ export interface ContentCalculateType {
 }
 
 export interface CansNeeded {
-  '18': number;
-  '3.6': number;
-  '2.5': number;
-  '0.5': number;
+  dezoito: number;
+  tresVirgulaSeis: number;
+  doisVirgulaCinco: number;
+  zeroVirgulaCinco: number;
   AreaTotal: number;
+  totalInk: number;
 }
 
 export interface CansInk {
