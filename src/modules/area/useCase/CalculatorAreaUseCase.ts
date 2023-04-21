@@ -33,10 +33,6 @@ export class CalculatorAreaUseCase {
       }
     });
 
-    // if(resultSumAllAreaDoor + resultSumAllAreaWindow < resultSumAllArea){
-    //   throw new HttpError('A soma da área da Janela e da porta não pode ser menor que a soma da area das paredes', 400);
-    // }
-
     resultSumAllArea = this.calculate.TotalArea(contentCalculate.wall.measure);
     console.log('Total da área da parede: ' + resultSumAllArea);
 
