@@ -22,3 +22,17 @@ export interface ContentCalculateType {
     measure: [Area];
   };
 }
+
+export interface CansNeeded {
+  '18': number;
+  '3.6': number;
+  '2.5': number;
+  '0.5': number;
+  AreaTotal: number;
+}
+
+export interface CansInk {
+  size: number;
+  complete: number;
+  missing: number;
+}

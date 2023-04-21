@@ -43,6 +43,7 @@ export class CalculatorAreaUseCase {
       totalAreaWall: resultSumAllArea,
     };
     const amountInkResult = this.calculate.amountInk(amountInk);
-    console.log(amountInkResult);
+
+    return amountInkResult;
   }
 }
