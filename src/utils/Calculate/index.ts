@@ -45,7 +45,7 @@ export class Calculate {
       });
     });
 
-    let valueTreatment: number = valueTotal;
+    let valueTreatment: number = parseFloat(amountInkPainter.toFixed(2));
 
     //array que define a quantidade de cada balde de tinta da para utilizar sem gasto
     let cansNeeded: CansNeeded = {
@@ -53,7 +53,7 @@ export class Calculate {
       tresVirgulaSeis: 0,
       doisVirgulaCinco: 0,
       zeroVirgulaCinco: 0,
-      AreaTotal: valueTotal,
+      AreaTotal: parseFloat(totalAreaConsideringDoorAndWindow.toFixed(2)),
       totalInk: parseFloat(amountInkPainter.toFixed(2)),
     };
 
