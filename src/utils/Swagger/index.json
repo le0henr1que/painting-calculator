@@ -1,0 +1,158 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "API de Cálculo de Área",
+      "description": "API para calcular a área de um ambiente considerando as medidas de suas paredes, portas e janelas."
+    },
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/calculate": {
+        "post": {
+          "summary": "Calcula a área de um ambiente.",
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "Dados para cálculo da área do ambiente.",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "wall": {
+                    "type": "object",
+                    "properties": {
+                      "measure": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "height": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "Altura da parede em metros."
+                            },
+                            "width": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "Largura da parede em metros."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "door": {
+                    "type": "object",
+                    "properties": {
+                      "measure": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "height": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "Altura da porta em metros."
+                            },
+                            "width": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "Largura da porta em metros."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "window": {
+                    "type": "object",
+                    "properties": {
+                      "measure": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "height": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "Altura da janela em metros."
+                            },
+                            "width": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "Largura da janela em metros."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Área do ambiente calculada com sucesso.",
+                "schema": {
+
+                    "type": "object",
+                    "properties": {
+                        "error": {
+                            "type": "boolean",
+                            "example": false
+                        },
+                        
+                        "result": {
+                            "type": "object",
+                            "properties": {
+                            "dezoito": {
+                                "type": "integer",
+                                "example": 0
+                            },
+                            "tresVirgulaSeis": {
+                                "type": "number",
+                                "example": 1
+                            },
+                            "doisVirgulaCinco": {
+                                "type": "number",
+                                "example": 0
+                            },
+                            "zeroVirgulaCinco": {
+                                "type": "number",
+                                "example": 3
+                            },
+                            "AreaTotal": {
+                                "type": "number",
+                                "example": 5
+                            },
+                            "totalInk": {
+                                "type": "number",
+                                "example": 5
+                            }
+                        }
+                    }
+                }
+            }
+            },
+            "400": {
+              "description": "Erro na requisição, verifique se os dados foram informados corretamente."
+            },
+            "500": {
+              "description": "Erro interno do servidor."
+            }
+          }
+        }
+      }
+    }
+  }

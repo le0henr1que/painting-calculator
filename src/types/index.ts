@@ -13,13 +13,13 @@ export interface AmountInk {
 
 export interface ContentCalculateType {
   wall: {
-    measure: [Area];
+    measure: Area[];
   };
   door: {
-    measure: [Area];
+    measure: Area[];
   };
   window: {
-    measure: [Area];
+    measure: Area[];
   };
 }
 

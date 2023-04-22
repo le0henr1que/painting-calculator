@@ -1,8 +1,18 @@
+# Definir imagem base
 FROM node:latest
+
+# Definir diretório de trabalho dentro do container
 WORKDIR /src
+
+# Copiar arquivos necessários para o diretório de trabalho
 COPY package*.json ./
-RUN npm install
 COPY . .
+
+# Instalar dependências
+RUN npm install
+
+# Executar a build
 RUN npm run build
 
-CMD [ "npm", "start" ]
+# Iniciar o programa
+CMD ["npm", "start"]

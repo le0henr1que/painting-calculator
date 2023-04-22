@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { HttpError } from '../../shared/error';
 
+//middleware responsavel pelo tratamento de erro
 export function errorMiddleware(err: Error, req: Request, res: Response, next: NextFunction) {
   console.log(err);
   if (err instanceof HttpError) {
