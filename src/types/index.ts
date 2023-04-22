@@ -1,5 +1,5 @@
 export interface Area {
-  map(arg0: (content: any) => void): unknown;
+  map?(arg0: (content: any) => void): unknown;
   width: number;
   height: number;
 }
