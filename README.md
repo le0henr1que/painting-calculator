@@ -1,7 +1,7 @@
 
 # Calculadora de pintura
-[![GitHub issues](https://img.shields.io/github/issues/le0henr1que/desafio-verzel-Back-end.svg)](https://github.com/le0henr1que/desafio-verzel-Back-end/issues)
-[![GitHub forks](https://img.shields.io/github/forks/sle0henr1que/desafio-verzel-Back-end.svg)](https://github.com/le0henr1que/desafio-verzel-Back-end/network)
+[![GitHub issues](https://img.shields.io/github/issues/le0henr1que/painting-calculator.svg)](https://github.com/le0henr1que/painting-calculator/issues)
+[![GitHub forks](https://img.shields.io/github/forks/sle0henr1que/painting-calculator.svg)](https://github.com/le0henr1que/painting-calculator/network)
 
 Este é um projeto que visa fornecer uma API RESTful para o calculo de consumo de tinta dependendo da área de um determinado local. Com ele, é possível retornar o uso adequado para cada medida de tinta.
 
